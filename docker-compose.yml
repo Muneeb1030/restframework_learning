@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    image: sufimuneeb/learning:v1
+    container_name: learning_c
+    command: python manage.py runserver 0.0.0.0:8000
